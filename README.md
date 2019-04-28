@@ -27,21 +27,20 @@ Things you may want to cover:
 
 |Column|Type|Options|
 |------|----|-------|
-|id|integer|null: false, foreign_key: true|
-|name|text|null: false, foreign_key: true|
+|id|integer|null: false|
+|name|text|null: false|
 |group_id|integer|foreign_key: true|
 
 ### Association
 - has_many :members
-- has_many :groups, through: :members
 - has_many :messages
 
 ## groupテーブル
 
 |Column|Type|Options|
 |------|----|-------|
-|id|integer|null: false, foreign_key: true|
-|group|text|null: false, foreign_key: true|
+|id|integer|null: false|
+|name|text|null: false|
 |user_id|integer|null: false, foreign_key: true|
 
 ### Association
@@ -54,7 +53,7 @@ Things you may want to cover:
 
 |Column|Type|Options|
 |------|----|-------|
-|id|integer|null: false, foreign_key: true|
+|id|integer|null: false|
 |user_id|integer|null: false, foreign_key: true|
 |group_id|integer|null: false, foreign_key: true|
 
