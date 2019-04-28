@@ -41,7 +41,6 @@ Things you may want to cover:
 |------|----|-------|
 |id|integer|null: false|
 |name|text|null: false|
-|user_id|integer|null: false, foreign_key: true|
 
 ### Association
 - has_many :members
@@ -67,10 +66,10 @@ Things you may want to cover:
 |------|----|-------|
 |user_id|integer|null: false, foreign_key: true|
 |group_id|integer|null: false, foreign_key: true|
-|body|text|foreign_key: true|
-|image|string|foreign_key: true|
+|body|text||
+|image|string||
 
 
 ### Association
-- belongs_to :user, through: :members
-- belomgs_to :group, through: :members
+- belongs_to :user
+- belomgs_to :group
