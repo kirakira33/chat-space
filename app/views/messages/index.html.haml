@@ -1,0 +1,49 @@
+.Notice
+  グループを作成しました
+.Chat-whole
+  .Chat-whole__Chat-side
+    .Chat-whole__Chat-side__side-header
+      .Chat-whole__Chat-side__side-header__user-name
+        sample
+      .Chat-whole__Chat-side__side-header__user-menu
+        .Chat-whole__Chat-side__side-header__user-menu__edit-user
+          =link_to href="/groups/new", class: "Chat-whole__Chat-side__side-header__user-menu__btn Chat-whole__Chat-side__side-header__user-menu__btn--edit" do
+            = fa_icon 'edit'
+        .Chat-whole__Chat-side__side-header__user-menu__new-group
+          =link_to href="/users/xx/edit", class: "Chat-whole__Chat-side__side-header__user-menu__btn Chat-whole__Chat-side__side-header__user-menu__btn--cog" do
+            = fa_icon 'cog'
+    .Chat-whole__Chat-side__groups
+      .Chat-whole__Chat-side__groups__group
+        .Chat-whole__Chat-side__groups__group__group-name
+          sample
+        .Chat-whole__Chat-side__groups__group__group-message
+          hello
+  .Chat-whole__Chat-main
+    .Chat-whole__Chat-main__main-header
+      .Chat-whole__Chat-main__main-header__current-group
+        .Chat-whole__Chat-main__main-header__current-group__group-name
+          SAMPLE
+        .Chat-whole__Chat-main__main-header__current-group__member-list
+          Member：test-user
+      .Chat-whole__Chat-main__main-header__edit-btn
+        Edit
+    .Chat-whole__Chat-main__messages
+      .Chat-whole__Chat-main__messages__message
+        .Chat-whole__Chat-main__messages__message__detail
+          .Chat-whole__Chat-main__messages__message__detail__detail-user
+            test-user
+          .Chat-whole__Chat-main__messages__message__detail__detail-date
+            2019/07/06(Sat) 18:56:10
+        .Chat-whole__Chat-main__messages__message__text
+          hello
+    .Chat-whole__Chat-main__type-box
+      .Chat-whole__Chat-main__type-box__create
+        .Chat-whole__Chat-main__type-box__create__input-area
+          .Chat-whole__Chat-main__type-box__create__input-area__text
+            type a message
+          .Chat-whole__Chat-main__type-box__create__input-area__image
+            <label class="Chat-whole__Chat-main__type-box__create__input-area__image__image-label" for="message_image"><i class="fa fa-image">
+            <input class="Chat-whole__Chat-main__type-box__create__input-area__image__input" type="file" name="message[image]" id="message_image">
+            </i></label>
+        .Chat-whole__Chat-main__type-box__create__submit-btn
+          Send
