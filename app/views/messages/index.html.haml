@@ -43,6 +43,11 @@
             type a message
           .Chat-whole__Chat-main__type-box__create__input-area__image
             %label.Chat-whole__Chat-main__type-box__create__input-area__image__image-label
-              %for= fa_icon 'image'
+              %for="message_image"
+              = fa_icon 'image'
+            %input.Chat-whole__Chat-main__type-box__create__input-area__image__input
+              %type="file"
+              %name="message[image]"
+              %id="message_image"
         .Chat-whole__Chat-main__type-box__create__submit-btn
           Send
