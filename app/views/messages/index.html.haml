@@ -42,8 +42,7 @@
           .Chat-whole__Chat-main__type-box__create__input-area__text
             type a message
           .Chat-whole__Chat-main__type-box__create__input-area__image
-            <label class="Chat-whole__Chat-main__type-box__create__input-area__image__image-label" for="message_image"><i class="fa fa-image">
-            <input class="Chat-whole__Chat-main__type-box__create__input-area__image__input" type="file" name="message[image]" id="message_image">
-            </i></label>
+            %label.Chat-whole__Chat-main__type-box__create__input-area__image__image-label
+              %for= fa_icon 'image'
         .Chat-whole__Chat-main__type-box__create__submit-btn
           Send
