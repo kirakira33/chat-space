@@ -147,12 +147,11 @@
             position: absolute;
             top: 10px;
             right: 10px;
-            &__image-label{
-              cursor: pointer;
-            }
-            &__input{
-              display: none;
-            }
+            box-sizing: border-box;
+            cursor: pointer;
+          }
+          &__input{
+            display: none;
           }
         }
         &__submit-btn{
