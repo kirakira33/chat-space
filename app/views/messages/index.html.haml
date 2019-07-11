@@ -41,13 +41,9 @@
         .Chat-whole__Chat-main__type-box__create__input-area
           .Chat-whole__Chat-main__type-box__create__input-area__text
             type a message
-          .Chat-whole__Chat-main__type-box__create__input-area__image
-            %label.Chat-whole__Chat-main__type-box__create__input-area__image__image-label
-              %for="message_image"
-              = fa_icon 'image'
-            %input.Chat-whole__Chat-main__type-box__create__input-area__image__input
-              %type="file"
-              %name="message[image]"
-              %id="message_image"
+          %label.Chat-whole__Chat-main__type-box__create__input-area__image
+            %i.fa.fa-picture-o{for: "message_image"}
+            .Chat-whole__Chat-main__type-box__create__input-area__input
+              = file_field :image, id: "message_image"
         .Chat-whole__Chat-main__type-box__create__submit-btn
           Send
