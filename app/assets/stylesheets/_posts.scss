@@ -122,53 +122,48 @@
         }
       }
     }
-    &__type-box{
-      display: block;
+    &__form{
       box-sizing: border-box;
       height: 90px;
       padding: 20px 40px;
       background-color: #ddd;
-      &__create{
-        display: flex;
-        &__input-area{
-          position: relative;
+      &__input-box{
+        position: relative;
+        width: 100%;
+        &__message{ 
           width: 100%;
-          &__text{
-            display: inline-block;
-            background-color: white;
-            box-sizing: border-box;
-            cursor: text;
-            line-height: 50px;
-            width: 100%;
-            padding: 0 40px 0 10px;
-            color: #434a54;
-            border-style: none;
+          box-sizing: border-box;
+          cursor: text;
+          line-height: 50px;
+          padding: 0 40px 0 10px;
+          color: #434a54;
+          border-style: none;
+        }
+        &__image{
+          position: absolute;
+          font-size: 1.3rem;
+          top: 10px;
+          right: 10px;
+          box-sizing: border-box;
+          cursor: pointer;
+          &__icon{
           }
-          &__image{
-            font-size: 1.3rem;
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            box-sizing: border-box;
-            cursor: pointer;
-          }
-          &__input{
+          &__hidden{
             display: none;
           }
         }
-        &__submit-btn{
-          line-height: 50px;
-          position: relative;
-          display: inline-block;
-          box-sizing: border-box;
-          width: 100px;
-          height: 50px;
-          padding: 0 30px;
-          margin-left: 15px;
-          background-color: #38aef0;
-          color: white;
-          cursor: pointer;
-        }
+      }
+      &__submit{
+        line-height: 50px;
+        display: inline-block;
+        box-sizing: border-box;
+        width: 100px;
+        height: 50px;
+        padding: 0 30px;
+        margin-left: 15px;
+        background-color: #38aef0;
+        color: white;
+        cursor: pointer;
       }
     }
   }

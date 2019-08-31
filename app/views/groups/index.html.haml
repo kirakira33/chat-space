@@ -11,22 +11,12 @@
         =link_to edit_group_path(:id) do
           Edit
     .Chat-whole__Chat-main__messages
-      .Chat-whole__Chat-main__messages__message
-        .Chat-whole__Chat-main__messages__message__detail
-          .Chat-whole__Chat-main__messages__message__detail__detail-user
-            test-user
-          .Chat-whole__Chat-main__messages__message__detail__detail-date
-            2019/07/06(Sat) 18:56:10
-        .Chat-whole__Chat-main__messages__message__text
-          hello
-    .Chat-whole__Chat-main__type-box
-      .Chat-whole__Chat-main__type-box__create
-        .Chat-whole__Chat-main__type-box__create__input-area
-          .Chat-whole__Chat-main__type-box__create__input-area__text
-            type a message
-          %label.Chat-whole__Chat-main__type-box__create__input-area__image
-            %i.fa.fa-picture-o{for: "message_image"}
-            .Chat-whole__Chat-main__type-box__create__input-area__input
-              = file_field :image, id: "message_image"
-        .Chat-whole__Chat-main__type-box__create__submit-btn
-          Send
+      = render partial: 'messages/message', collection: @messages
+    .Chat-whole__Chat-main__form
+      = form_for [@group, @message] do |f|
+        .Chat-whole__Chat-main__form__input-box
+          = f.text_field :content, class: 'Chat-whole__Chat-main__form__input-box__message', placeholder: 'type a message'
+          = f.label :image, class: 'Chat-whole__Chat-main__form__input-box__image' do
+            = fa_icon 'picture-o', class: 'Chat-whole__Chat-main__form__input-box__image__icon'
+            = f.file_field :image, class: 'Chat-whole__Chat-main__form__input-box__image__hidden'
+        = f.submit 'Send', class: 'Chat-whole__Chat-main__form__submit'
