@@ -38,7 +38,7 @@ $(function(){
       var html = buildHTML(data);
       $('.Chat-whole__Chat-main__messages').append(html);
       $('.Chat-whole__Chat-main__messages').animate({scrollTop:$('.Chat-whole__Chat-main__messages')[0].scrollHeight});
-      $('.Chat-whole__Chat-main__messages__message__text__content')[0].reset();
+      $('.Chat-whole__Chat-main__form__input-box__message')[0].reset();
       $('.Chat-whole__Chat-main__form__submit').removeAttr('disabled');
     })
     .fail(function(){
