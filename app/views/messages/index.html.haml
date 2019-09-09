@@ -4,9 +4,12 @@
     .Chat-whole__Chat-main__main-header
       .Chat-whole__Chat-main__main-header__current-group
         .Chat-whole__Chat-main__main-header__current-group__group-name
-          SAMPLE
+          = @group.name
         .Chat-whole__Chat-main__main-header__current-group__member-list
-          Member：test-user
+          Member：
+          - @group.users.each do |user|
+            %li.member
+            = user.name
       .Chat-whole__Chat-main__main-header__edit-btn
         =link_to edit_group_path(:id) do
           Edit
