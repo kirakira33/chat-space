@@ -11,8 +11,7 @@
             %li.member
             = user.name
       .Chat-whole__Chat-main__main-header__edit-btn
-        =link_to edit_group_path(:id) do
-          Edit
+        =link_to"Edit", edit_group_path(@group),class:'edit'
     .Chat-whole__Chat-main__messages
       = render partial: 'messages/message', collection: @messages
     .Chat-whole__Chat-main__form
