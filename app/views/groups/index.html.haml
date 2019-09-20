@@ -1,25 +1,2 @@
 .Chat-whole
   = render 'shared/side_bar'
-  .Chat-whole__Chat-main
-    .Chat-whole__Chat-main__main-header
-      .Chat-whole__Chat-main__main-header__current-group
-        .Chat-whole__Chat-main__main-header__current-group__group-name
-          = @group.name
-        .Chat-whole__Chat-main__main-header__current-group__member-list
-          Member：
-          - @group.users.each do |user|
-            %li.member
-            = user.name
-      .Chat-whole__Chat-main__main-header__edit-btn
-        =link_to edit_group_path(:id) do
-          Edit
-    .Chat-whole__Chat-main__messages
-      = render partial: 'messages/message', collection: @messages
-    .Chat-whole__Chat-main__form
-      = form_for [@group, @message] do |f|
-        .Chat-whole__Chat-main__form__input-box
-          = f.text_field :content, class: 'Chat-whole__Chat-main__form__input-box__message', placeholder: 'type a message'
-          = f.label :image, class: 'Chat-whole__Chat-main__form__input-box__image' do
-            = fa_icon 'picture-o', class: 'Chat-whole__Chat-main__form__input-box__image__icon'
-            = f.file_field :image, class: 'Chat-whole__Chat-main__form__input-box__image__hidden'
-        = f.submit 'Send', class: 'Chat-whole__Chat-main__form__submit'
