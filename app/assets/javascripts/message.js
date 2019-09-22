@@ -47,7 +47,7 @@ $(document).on('turbolinks:load', function() {
 
     var reloadMessages = function() {
       if (window.location.href.match(/\/groups\/\d+\/messages/)){
-        let last_message_id = $('.message').last().data('id');
+        var last_message_id = $('.Chat-whole__Chat-main__messages__message').last().data('id');
 
       $.ajax({
         url: "api/messages",
@@ -61,7 +61,7 @@ $(document).on('turbolinks:load', function() {
         
         messages.forEach(function(message) {
           insertHTML = buildHTML(message);
-          $('.messages').append(insertHTML);
+          $('.Chat-whole__Chat-main__messages').append(insertHTML);
         })
         $('.Chat-whole__Chat-main__messages').animate({scrollTop: $('.Chat-whole__Chat-main__messages')[0].scrollHeight}, 'fast')
         }
