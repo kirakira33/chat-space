@@ -1,8 +1,8 @@
 $(document).on('turbolinks:load', function() {
     function buildHTML(message){
-      var image = (message.image) ? `<img src='${ message.image }', class='Chat-whole__Chat-main__messages__message__text__image' >` : ""
+      var image = (message.image) ? `<img src='${ message.image }' class='Chat-whole__Chat-main__messages__message__text__image' >` : ""
 
-      var html = `<div class="Chat-whole__Chat-main__messages__message", data-id='${message.id}'>
+      var html = `<div class="Chat-whole__Chat-main__messages__message" data-id='${message.id}'>
                     <div class="Chat-whole__Chat-main__messages__message__detail">
                       <div class="Chat-whole__Chat-main__messages__message__detail__detail-user">
                         ${message.user_name}
